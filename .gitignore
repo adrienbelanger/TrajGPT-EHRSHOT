@@ -11,14 +11,15 @@
 *.sln.docstates
 *.env
 data/
-TrajGPT Code/
+TrajGPT_Code/
+
 *.DS_Store
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
 # Mono auto generated files
 mono_crash.*
-
+benchmark/
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -418,3 +419,6 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+meds_to_train.py
+test_dataloader.py
+prep_finetune.py
