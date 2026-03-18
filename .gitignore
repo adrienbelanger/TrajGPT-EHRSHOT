@@ -12,11 +12,12 @@
 *.env
 data/
 TrajGPT_Code/
-
+EHRSHOT_ASSETS/
+EHRSHOT_MEDS/
 *.DS_Store
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-
+old/
 # Mono auto generated files
 mono_crash.*
 benchmark/
