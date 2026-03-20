@@ -10,7 +10,7 @@
 *.userosscache
 *.sln.docstates
 *.env
-data/
+
 TrajGPT_Code/
 EHRSHOT_ASSETS/
 EHRSHOT_MEDS/
@@ -423,3 +423,5 @@ FodyWeavers.xsd
 meds_to_train.py
 test_dataloader.py
 prep_finetune.py
+CONCEPT_RELATIONSHIP.csv
+CONCEPT.csv
