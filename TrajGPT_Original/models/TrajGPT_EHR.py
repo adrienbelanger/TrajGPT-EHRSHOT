@@ -109,9 +109,6 @@ class TrajGPT(nn.Module):
             hidden_states = block_outputs[0]
             present_key_values += (block_outputs[1],)
 
-            torch.cuda.empty_cache()
-            gc.collect()
-
             # calculate memory usage after processing the current layer
             # gpu_mem_usage = get_gpu_memory_usage()
             # print("GPU memory usage after %d th layer:" % i)
