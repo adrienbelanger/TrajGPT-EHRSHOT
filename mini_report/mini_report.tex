@@ -1,0 +1,247 @@
+\documentclass{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{caption}
+\usepackage{hyperref}
+
+\renewcommand{\tablename}{Task}
+
+\newcommand{\B}[1]{\textbf{#1}}
+\newcommand{\IT}[1]{\textit{#1}}
+
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+\footnotesize
+
+\begin{center} Leaderboard results based on results found on EHRSHOT website: \href{https://som-shahlab.github.io/ehrshot-website/leaderboard/paper/}{link} and notebook benchmark results: \href{https://colab.research.google.com/drive/1_Wy2hev0zJKGPcl0mckvNNAda8icZ_Cj?usp=sharing}{link} \end{center}
+
+% Task 1 — 30-day Readmission
+\begin{table}[ht]
+\centering\caption{30-day Readmission}
+\begin{tabular}{l *{9}{r}}
+\toprule
+\textbf{Model} & \textbf{ALL} & \textbf{K1} & \textbf{K2} & \textbf{K4} & \textbf{K8} & \textbf{K12} & \textbf{K16} & \textbf{K24} & \textbf{K32} \\
+\midrule
+CLMBR-T-base  & \B{0.810} & 0.532     & \B{0.611} & \B{0.719} & \B{0.704} & \B{0.715} & \B{0.757} & \B{0.777} & \B{0.777} \\
+GBM           & 0.741     & 0.498     & 0.540     & 0.544     & 0.621     & 0.599     & 0.621     & 0.680     & 0.688     \\
+Log.\ Reg.    & 0.751     & 0.557     & 0.561     & 0.657     & 0.672     & 0.641     & 0.666     & 0.676     & 0.685     \\
+Random Forest & 0.775     & \B{0.559} & 0.524     & 0.573     & 0.617     & 0.622     & 0.672     & 0.683     & 0.682     \\
+\IT{TrajGPT}  & \IT{0.580} & \IT{0.516} & \IT{0.511} & \IT{0.526} & \IT{0.519} & \IT{0.516} & \IT{0.527} & \IT{0.537} & \IT{0.536} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Task 2 — Acute MI
+\begin{table}[ht]
+\centering\caption{Acute MI}
+\begin{tabular}{l *{9}{r}}
+\toprule
+\textbf{Model} & \textbf{ALL} & \textbf{K1} & \textbf{K2} & \textbf{K4} & \textbf{K8} & \textbf{K12} & \textbf{K16} & \textbf{K24} & \textbf{K32} \\
+\midrule
+CLMBR-T-base  & 0.729     & \B{0.551} & 0.540     & \B{0.620} & 0.574     & 0.566     & 0.590     & \B{0.653} & \B{0.688} \\
+GBM           & 0.725     & 0.471     & 0.528     & 0.566     & 0.563     & 0.557     & 0.611     & 0.632     & 0.647     \\
+Log.\ Reg.    & 0.678     & 0.542     & \B{0.556} & 0.586     & 0.575     & 0.565     & 0.579     & 0.622     & 0.624     \\
+Random Forest & \B{0.741} & 0.542     & 0.537     & 0.592     & \B{0.603} & \B{0.569} & \B{0.616} & 0.644     & 0.673     \\
+\IT{TrajGPT}  & \IT{0.526} & \IT{0.504} & \IT{0.496} & \IT{0.488} & \IT{0.491} & \IT{0.488} & \IT{0.490} & \IT{0.499} & \IT{0.500} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Task 3 — Anemia
+\begin{table}[ht]
+\centering\caption{Anemia}
+\begin{tabular}{l *{9}{r}}
+\toprule
+\textbf{Model} & \textbf{ALL} & \textbf{K1} & \textbf{K2} & \textbf{K4} & \textbf{K8} & \textbf{K12} & \textbf{K16} & \textbf{K24} & \textbf{K32} \\
+\midrule
+CLMBR-T-base  & \B{0.962} & \B{0.645} & \B{0.711} & \B{0.763} & \B{0.838} & \B{0.853} & \B{0.877} & \B{0.895} & \B{0.905} \\
+GBM           & 0.814     & 0.486     & 0.524     & 0.552     & 0.613     & 0.629     & 0.625     & 0.644     & 0.666     \\
+Log.\ Reg.    & 0.739     & 0.480     & 0.515     & 0.588     & 0.619     & 0.619     & 0.633     & 0.628     & 0.638     \\
+Random Forest & 0.799     & 0.493     & 0.503     & 0.612     & 0.637     & 0.651     & 0.661     & 0.657     & 0.674     \\
+\IT{TrajGPT}  & \IT{0.668} & \IT{0.499} & \IT{0.511} & \IT{0.498} & \IT{0.508} & \IT{0.519} & \IT{0.536} & \IT{0.543} & \IT{0.548} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Task 4 — Celiac
+\begin{table}[ht]
+\centering\caption{Celiac}
+\begin{tabular}{l *{9}{r}}
+\toprule
+\textbf{Model} & \textbf{ALL} & \textbf{K1} & \textbf{K2} & \textbf{K4} & \textbf{K8} & \textbf{K12} & \textbf{K16} & \textbf{K24} & \textbf{K32} \\
+\midrule
+CLMBR-T-base  & 0.557     & 0.455     & 0.512     & \B{0.573} & \B{0.597} & \B{0.617} & \B{0.617} & 0.613     & 0.584     \\
+GBM           & 0.723     & 0.482     & 0.491     & 0.465     & 0.478     & 0.550     & 0.539     & 0.596     & 0.539     \\
+Log.\ Reg.    & \B{0.758} & \B{0.519} & 0.495     & 0.481     & 0.587     & 0.571     & 0.612     & \B{0.668} & \B{0.712} \\
+Random Forest & 0.639     & 0.456     & \B{0.518} & 0.502     & 0.508     & 0.536     & 0.498     & 0.570     & 0.574     \\
+\IT{TrajGPT}  & \IT{0.369} & \IT{0.495} & \IT{0.515} & \IT{0.519} & \IT{0.549} & \IT{0.552} & \IT{0.537} & \IT{0.531} & \IT{0.542} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Task 5 — Hyperkalemia
+\begin{table}[ht]
+\centering\caption{Hyperkalemia}
+\begin{tabular}{l *{9}{r}}
+\toprule
+\textbf{Model} & \textbf{ALL} & \textbf{K1} & \textbf{K2} & \textbf{K4} & \textbf{K8} & \textbf{K12} & \textbf{K16} & \textbf{K24} & \textbf{K32} \\
+\midrule
+CLMBR-T-base  & \B{0.792} & \B{0.534} & \B{0.559} & \B{0.579} & \B{0.616} & \B{0.621} & \B{0.634} & \B{0.631} & \B{0.659} \\
+GBM           & 0.727     & 0.504     & 0.507     & 0.497     & 0.533     & 0.516     & 0.524     & 0.574     & 0.588     \\
+Log.\ Reg.    & 0.658     & 0.501     & 0.504     & 0.508     & 0.531     & 0.513     & 0.517     & 0.541     & 0.577     \\
+Random Forest & 0.660     & 0.470     & 0.529     & 0.508     & 0.546     & 0.559     & 0.563     & 0.567     & 0.573     \\
+\IT{TrajGPT}  & \IT{0.550} & \IT{0.502} & \IT{0.499} & \IT{0.500} & \IT{0.499} & \IT{0.500} & \IT{0.503} & \IT{0.500} & \IT{0.505} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Task 6 — Hyperlipidemia
+\begin{table}[ht]
+\centering\caption{Hyperlipidemia}
+\begin{tabular}{l *{9}{r}}
+\toprule
+\textbf{Model} & \textbf{ALL} & \textbf{K1} & \textbf{K2} & \textbf{K4} & \textbf{K8} & \textbf{K12} & \textbf{K16} & \textbf{K24} & \textbf{K32} \\
+\midrule
+CLMBR-T-base  & 0.675     & 0.503     & 0.519     & \B{0.555} & \B{0.597} & \B{0.592} & 0.597     & \B{0.619} & 0.618     \\
+GBM           & 0.699     & 0.474     & 0.498     & 0.533     & 0.564     & 0.569     & 0.550     & 0.565     & 0.605     \\
+Log.\ Reg.    & \B{0.720} & \B{0.511} & \B{0.532} & 0.545     & 0.578     & 0.588     & \B{0.603} & 0.616     & \B{0.651} \\
+Random Forest & 0.625     & 0.500     & 0.517     & 0.533     & 0.575     & 0.556     & 0.559     & 0.585     & 0.598     \\
+\IT{TrajGPT}  & \IT{0.511} & \IT{0.500} & \IT{0.497} & \IT{0.504} & \IT{0.508} & \IT{0.512} & \IT{0.511} & \IT{0.510} & \IT{0.517} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Task 7 — Hypertension
+\begin{table}[ht]
+\centering\caption{Hypertension}
+\begin{tabular}{l *{9}{r}}
+\toprule
+\textbf{Model} & \textbf{ALL} & \textbf{K1} & \textbf{K2} & \textbf{K4} & \textbf{K8} & \textbf{K12} & \textbf{K16} & \textbf{K24} & \textbf{K32} \\
+\midrule
+CLMBR-T-base  & \B{0.718} & \B{0.554} & \B{0.632} & \B{0.631} & \B{0.646} & \B{0.645} & \B{0.668} & \B{0.659} & \B{0.663} \\
+GBM           & 0.637     & 0.486     & 0.509     & 0.532     & 0.538     & 0.547     & 0.558     & 0.580     & 0.566     \\
+Log.\ Reg.    & 0.689     & 0.540     & 0.575     & 0.580     & 0.571     & 0.586     & 0.612     & 0.623     & 0.603     \\
+Random Forest & 0.627     & 0.512     & 0.504     & 0.536     & 0.549     & 0.572     & 0.572     & 0.586     & 0.578     \\
+\IT{TrajGPT}  & \IT{0.544} & \IT{0.485} & \IT{0.492} & \IT{0.496} & \IT{0.502} & \IT{0.504} & \IT{0.501} & \IT{0.503} & \IT{0.507} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Task 8 — Hypoglycemia
+\begin{table}[ht]
+\centering\caption{Hypoglycemia}
+\begin{tabular}{l *{9}{r}}
+\toprule
+\textbf{Model} & \textbf{ALL} & \textbf{K1} & \textbf{K2} & \textbf{K4} & \textbf{K8} & \textbf{K12} & \textbf{K16} & \textbf{K24} & \textbf{K32} \\
+\midrule
+CLMBR-T-base  & \B{0.794} & 0.506     & \B{0.527} & \B{0.542} & \B{0.541} & \B{0.548} & \B{0.578} & \B{0.589} & \B{0.604} \\
+GBM           & 0.627     & \B{0.520} & 0.523     & 0.508     & 0.504     & 0.509     & 0.494     & 0.526     & 0.533     \\
+Log.\ Reg.    & 0.582     & 0.507     & 0.524     & 0.524     & 0.515     & 0.505     & 0.528     & 0.542     & 0.549     \\
+Random Forest & 0.606     & 0.503     & 0.496     & 0.510     & 0.497     & 0.497     & 0.505     & 0.533     & 0.529     \\
+\IT{TrajGPT}  & \IT{0.540} & \IT{0.496} & \IT{0.491} & \IT{0.494} & \IT{0.490} & \IT{0.495} & \IT{0.495} & \IT{0.502} & \IT{0.505} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Task 9 — Hyponatremia
+\begin{table}[ht]
+\centering\caption{Hyponatremia}
+\begin{tabular}{l *{9}{r}}
+\toprule
+\textbf{Model} & \textbf{ALL} & \textbf{K1} & \textbf{K2} & \textbf{K4} & \textbf{K8} & \textbf{K12} & \textbf{K16} & \textbf{K24} & \textbf{K32} \\
+\midrule
+CLMBR-T-base  & \B{0.760} & \B{0.517} & \B{0.528} & \B{0.547} & \B{0.552} & \B{0.555} & \B{0.554} & \B{0.568} & \B{0.585} \\
+GBM           & 0.659     & 0.500     & 0.497     & 0.515     & 0.513     & 0.522     & 0.515     & 0.522     & 0.531     \\
+Log.\ Reg.    & 0.612     & 0.502     & 0.501     & 0.509     & 0.511     & 0.528     & 0.525     & 0.514     & 0.527     \\
+Random Forest & 0.631     & 0.516     & 0.501     & 0.515     & 0.513     & 0.527     & 0.522     & 0.524     & 0.526     \\
+\IT{TrajGPT}  & \IT{0.568} & \IT{0.497} & \IT{0.493} & \IT{0.493} & \IT{0.498} & \IT{0.495} & \IT{0.498} & \IT{0.500} & \IT{0.501} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Task 10 — ICU Admission
+\begin{table}[ht]
+\centering\caption{ICU Admission}
+\begin{tabular}{l *{9}{r}}
+\toprule
+\textbf{Model} & \textbf{ALL} & \textbf{K1} & \textbf{K2} & \textbf{K4} & \textbf{K8} & \textbf{K12} & \textbf{K16} & \textbf{K24} & \textbf{K32} \\
+\midrule
+CLMBR-T-base  & \B{0.848} & \B{0.597} & \B{0.598} & \B{0.601} & \B{0.701} & \B{0.742} & \B{0.763} & \B{0.763} & \B{0.786} \\
+GBM           & 0.799     & 0.534     & 0.523     & 0.545     & 0.586     & 0.565     & 0.585     & 0.626     & 0.676     \\
+Log.\ Reg.    & 0.701     & 0.543     & 0.555     & 0.577     & 0.603     & 0.638     & 0.649     & 0.667     & 0.685     \\
+Random Forest & 0.721     & 0.524     & 0.521     & 0.565     & 0.577     & 0.573     & 0.563     & 0.628     & 0.677     \\
+\IT{TrajGPT}  & \IT{0.599} & \IT{0.556} & \IT{0.566} & \IT{0.550} & \IT{0.595} & \IT{0.602} & \IT{0.605} & \IT{0.625} & \IT{0.623} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Task 11 — Long LOS
+\begin{table}[ht]
+\centering\caption{Long LOS}
+\begin{tabular}{l *{9}{r}}
+\toprule
+\textbf{Model} & \textbf{ALL} & \textbf{K1} & \textbf{K2} & \textbf{K4} & \textbf{K8} & \textbf{K12} & \textbf{K16} & \textbf{K24} & \textbf{K32} \\
+\midrule
+CLMBR-T-base  & \B{0.814} & \B{0.537} & \B{0.560} & \B{0.563} & \B{0.571} & \B{0.607} & \B{0.618} & \B{0.632} & \B{0.655} \\
+GBM           & 0.783     & 0.506     & 0.498     & 0.516     & 0.562     & 0.560     & 0.557     & 0.568     & 0.603     \\
+Log.\ Reg.    & 0.704     & 0.474     & 0.507     & 0.538     & 0.557     & 0.560     & 0.579     & 0.591     & 0.597     \\
+Random Forest & 0.758     & 0.492     & 0.490     & 0.537     & 0.547     & 0.574     & 0.594     & 0.574     & 0.615     \\
+\IT{TrajGPT}  & \IT{0.583} & \IT{0.485} & \IT{0.492} & \IT{0.495} & \IT{0.506} & \IT{0.510} & \IT{0.518} & \IT{0.527} & \IT{0.533} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Task 12 — Lupus
+\begin{table}[ht]
+\centering\caption{Lupus}
+\begin{tabular}{l *{9}{r}}
+\toprule
+\textbf{Model} & \textbf{ALL} & \textbf{K1} & \textbf{K2} & \textbf{K4} & \textbf{K8} & \textbf{K12} & \textbf{K16} & \textbf{K24} & \textbf{K32} \\
+\midrule
+CLMBR-T-base  & 0.747     & 0.526     & 0.493     & 0.529     & 0.608     & \B{0.620} & \B{0.656} & \B{0.646} & 0.651     \\
+GBM           & 0.703     & 0.478     & 0.555     & \B{0.555} & \B{0.615} & 0.595     & 0.588     & 0.634     & 0.599     \\
+Log.\ Reg.    & \B{0.793} & \B{0.535} & 0.556     & 0.553     & 0.605     & 0.611     & 0.652     & 0.617     & \B{0.657} \\
+Random Forest & 0.587     & 0.487     & \B{0.565} & 0.512     & 0.553     & 0.571     & 0.607     & 0.642     & 0.642     \\
+\IT{TrajGPT}  & \IT{0.621} & \IT{0.508} & \IT{0.500} & \IT{0.512} & \IT{0.524} & \IT{0.515} & \IT{0.505} & \IT{0.517} & \IT{0.507} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Task 13 — Pancreatic Cancer
+\begin{table}[ht]
+\centering\caption{Pancreatic Cancer}
+\begin{tabular}{l *{9}{r}}
+\toprule
+\textbf{Model} & \textbf{ALL} & \textbf{K1} & \textbf{K2} & \textbf{K4} & \textbf{K8} & \textbf{K12} & \textbf{K16} & \textbf{K24} & \textbf{K32} \\
+\midrule
+CLMBR-T-base  & 0.813     & \B{0.613} & \B{0.628} & 0.650     & \B{0.677} & 0.701     & 0.715     & 0.703     & 0.729     \\
+GBM           & 0.824     & 0.528     & 0.544     & 0.567     & 0.668     & \B{0.711} & 0.666     & 0.725     & 0.752     \\
+Log.\ Reg.    & 0.856     & 0.611     & 0.623     & \B{0.651} & 0.675     & 0.705     & \B{0.726} & 0.719     & 0.715     \\
+Random Forest & \B{0.885} & 0.522     & 0.596     & 0.621     & 0.627     & 0.708     & 0.719     & \B{0.733} & \B{0.764} \\
+\IT{TrajGPT}  & \IT{0.529} & \IT{0.505} & \IT{0.502} & \IT{0.498} & \IT{0.496} & \IT{0.506} & \IT{0.516} & \IT{0.512} & \IT{0.506} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Task 14 — Thrombocytopenia
+\begin{table}[ht]
+\centering\caption{Thrombocytopenia}
+\begin{tabular}{l *{9}{r}}
+\toprule
+\textbf{Model} & \textbf{ALL} & \textbf{K1} & \textbf{K2} & \textbf{K4} & \textbf{K8} & \textbf{K12} & \textbf{K16} & \textbf{K24} & \textbf{K32} \\
+\midrule
+CLMBR-T-base  & \B{0.852} & \B{0.530} & \B{0.590} & \B{0.628} & \B{0.647} & \B{0.651} & \B{0.672} & \B{0.682} & \B{0.706} \\
+GBM           & 0.815     & 0.511     & 0.502     & 0.513     & 0.598     & 0.590     & 0.613     & 0.620     & 0.642     \\
+Log.\ Reg.    & 0.753     & 0.530     & 0.585     & 0.600     & 0.631     & 0.635     & 0.641     & 0.610     & 0.617     \\
+Random Forest & 0.811     & 0.512     & 0.540     & 0.562     & 0.629     & 0.598     & 0.624     & 0.641     & 0.651     \\
+\IT{TrajGPT}  & \IT{0.596} & \IT{0.506} & \IT{0.506} & \IT{0.503} & \IT{0.506} & \IT{0.509} & \IT{0.507} & \IT{0.509} & \IT{0.510} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
